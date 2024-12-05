@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c6abf1;
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 100%, auto 100%;
+  }
+  
+  #welcome-screen {
+    text-align: center;
+  }
+  
+  #welcome-screen h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  #welcome-screen p {
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+  
+  #start-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #fff;
+    color: #c6abf1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #start-btn:hover {
+    background-color: #c6abf1;
+    color: #fff;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .todo-app {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 130px; /* Отступ снизу, чтобы отделить от остальных элементов */
+  }
+  
+  #new-task {
+    flex: 1; /* Занимает всю доступную ширину */
+    padding: 15px; /* Увеличиваем внутренний отступ для большего размера */
+    margin-right: 10px;
+    font-size: 1.2em; /* Увеличиваем размер шрифта для лучшей читаемости */
+    border: 2px solid #c6abf1; /* Рамка для поля ввода */
+    border-radius: 5px; /* Закругленные углы для поля ввода */
+    box-sizing: border-box; /* Чтобы padding не увеличивал размер элемента */
+    min-height: 50px; /* Минимальная высота для удобства ввода текста */
+  }
+  
+  #add-task {
+    padding: 10px;
+    border: 2px solid #c6abf1;
+    background-color: #fff;
+    color: #c6abf1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #add-task:hover {
+    background-color: #c6abf1;
+    color: #fff;
+  }
+  
+  .info-box {
+    padding: 10px;
+    background-color: #e6e6fa; /* Бледно лавандовый цвет */
+    color: #666; /* Более бледный цвет текста */
+    font-size: 0.8em; /* Еще меньший шрифт */
+    margin-bottom: 20px; /* Отступ снизу, чтобы отделить от списка задач */
+    border-radius: 5px; /* Закругление углов для соответствия дизайну */
+  }
+  
+  .task-container {
+    background-color: #f9f9f9; /* Цвет фона для окошка */
+    border: 1px solid #ddd; /* Рамка вокруг окошка */
+    border-radius: 5px;
+    padding: 10px;
+    max-height: 300px; /* Максимальная высота для прокрутки */
+    overflow-y: auto; /* Включить прокрутку, если контент выходит за пределы */
+    position: relative; /* Для размещения картинки внутри контейнера */
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .task-text {
+    flex: 1;
+  }
+  
+  .task-text.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Определение анимации для плавного перемещения градиента */
+  @keyframes gradientShift {
+    0% {
+      background-position: -100% 0; /* Начальная позиция градиента */
+    }
+    100% {
+      background-position: 100% 0; /* Конечная позиция градиента */
+    }
+  }
+  button img:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+  /* Применение градиента и анимации ко всему фону */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #c6abf1 0%, #ffffff 50%, #c6abf1 100%); /* Градиент с плавным переходом */
+    background-size: 200% 100%; /* Увеличиваем размер градиента, чтобы он мог двигаться */
+    animation: gradientShift 15s ease-in-out infinite; /* Анимация градиента */
+  }
